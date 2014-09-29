@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- dependencies -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!-- your scripts -->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+      <!-- Your HTML goes here! -->
+      <button class='fetch' style="display: inline-block; float: right">Fetch</button>
+      <form class='submit' style="display: inline;">
+        <button type="submit" class='send' style="display: inline">Send Message</button>
+        <input type='text' value='Enter your message here...' onfocus="this.value = ''" style="display: block; width: 400px; height: 20px"></input>
+      </form>
+      <div id='canvas'></div>
+    </div>
+    <div id="sidebar">
+      <form class='room-selector-form'>
+        <select class='room-selector'>
+          <option value="all">All Rooms</option>
+        </select>
+        <input type='text' value='Room Name' onfocus="this.value = ''" class='newroom' ></input>
+        <button type='submit'  class='newroom'>Create Room</button>
+      </form>
+    </div>
+    <script>$(document).ready(function() {
+      app.init();
+    });</script>
+  </body>
+</html>
