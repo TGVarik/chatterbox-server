@@ -23,6 +23,10 @@ module.exports = {
     this.url = url;
     this.method = method;
     this._postData = postdata;
+    this.headers = {};
+    this.headers["x-purse-application-id"] = '12345';
+    this.headers["x-purse-rest-api-key"] = 'abcde';
+    this.headers["content-type"] = 'application/json';
     this.setEncoding = function(type) {
       //ignore
     };

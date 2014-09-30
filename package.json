@@ -7,6 +7,10 @@
   "scripts": {
     "test": "mocha server/spec"
   },
+  "dependencies": {
+    "underscore": ">=1.7.0",
+    "sift": ">=0.0.18"
+  },
   "devDependencies": {
     "mocha": "^1.21.4",
     "request": "^2.34.0",

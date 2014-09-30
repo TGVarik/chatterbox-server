@@ -83,10 +83,7 @@ var app = {
   fetch: function(){
     var where = {
       updatedAt:{
-        $gte: {
-          __type: 'Date',
-          iso: app.lastHour()
-        }
+        $gte: app.lastHour()
       }
     };
     var room = $('.room-selector').val();
@@ -105,7 +102,8 @@ var app = {
     })
   },
 
-  server: 'https://api.parse.com/1/classes/chatterbox',
+  //server: 'https://api.parse.com/1/classes/chatterbox',
+    server: 'http://localhost:3000/classes/chatterbox',
 
   clean: function(message) {
     //cleans one message
